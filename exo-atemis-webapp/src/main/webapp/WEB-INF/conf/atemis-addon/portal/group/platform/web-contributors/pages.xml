@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page-set xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_3 http://www.gatein.org/xml/ns/gatein_objects_1_3">
+   <page>
+      <name>wcm</name>
+      <title>Site Explorer</title>
+      <access-permissions>*:/platform/web-contributors</access-permissions>
+      <edit-permission>manager:/platform/web-contributors</edit-permission>
+      <show-max-window>false</show-max-window>
+      <portlet-application>
+         <portlet>
+            <application-ref>ecmexplorer</application-ref>
+            <portlet-ref>FileExplorerPortlet</portlet-ref>
+         </portlet>
+         <title>Site Explorer</title>
+         <access-permissions>*:/platform/web-contributors</access-permissions>
+         <show-info-bar>false</show-info-bar>
+         <show-application-state>false</show-application-state>
+         <show-application-mode>false</show-application-mode>
+      </portlet-application>
+   </page>
+   <page>
+      <name>SiteExplorer</name>
+      <title>Site Explorer</title>
+      <access-permissions>*:/platform/web-contributors</access-permissions>
+      <edit-permission>manager:/platform/web-contributors</edit-permission>
+      <show-max-window>false</show-max-window>
+      <portlet-application>
+         <portlet>
+            <application-ref>ecmexplorer</application-ref>
+            <portlet-ref>FileExplorerPortlet</portlet-ref>
+            <preferences>
+               <preference>
+                  <name>driveName</name>
+                  <value>Managed Sites</value>
+                  <read-only>false</read-only>
+               </preference>
+            </preferences>
+         </portlet>
+         <title>Site Explorer</title>
+         <access-permissions>*:/platform/web-contributors</access-permissions>
+         <show-info-bar>false</show-info-bar>
+         <show-application-state>false</show-application-state>
+         <show-application-mode>false</show-application-mode>
+      </portlet-application>
+      <portlet-application>
+         <portlet>
+            <application-ref>authoring-apps</application-ref>
+            <portlet-ref>AuthoringDashboard</portlet-ref>
+         </portlet>
+         <title>Authoring Dashboard</title>
+         <access-permissions>*:/platform/web-contributors</access-permissions>
+         <show-info-bar>false</show-info-bar>
+         <show-application-state>false</show-application-state>
+         <show-application-mode>false</show-application-mode>
+      </portlet-application>
+   </page>
+   <page>
+      <name>Editor</name>
+      <title>Editor</title>
+      <access-permissions>*:/platform/web-contributors</access-permissions>
+      <edit-permission>manager:/platform/web-contributors</edit-permission>
+      <show-max-window>true</show-max-window>
+      <portlet-application>
+         <portlet>
+            <application-ref>ecmexplorer</application-ref>
+            <portlet-ref>FileExplorerPortlet</portlet-ref>
+            <preferences>
+               <preference>
+                  <name>showActionBar</name>
+                  <value>true</value>
+                  <read-only>false</read-only>
+               </preference>
+               <preference>
+                  <name>editInNewWindow</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+               </preference>
+               <preference>
+                  <name>usecase</name>
+                  <value>selection</value>
+                  <read-only>false</read-only>
+               </preference>
+               <preference>
+                  <name>driveName</name>
+                  <value>Collaboration</value>
+                  <read-only>false</read-only>
+               </preference>
+               <preference>
+                  <name>showSideBar</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+               </preference>
+               <preference>
+                  <name>showTopBar</name>
+                  <value>true</value>
+                  <read-only>false</read-only>
+               </preference>
+            </preferences>
+         </portlet>
+         <title>Editor</title>
+         <access-permissions>*:/platform/web-contributors</access-permissions>
+         <show-info-bar>false</show-info-bar>
+         <show-application-state>false</show-application-state>
+         <show-application-mode>false</show-application-mode>
+      </portlet-application>
+   </page>
+   <page>
+      <name>WcmAdmin</name>
+      <title>WCM Administration</title>
+      <access-permissions>manager:/platform/web-contributors</access-permissions>
+      <edit-permission>manager:/platform/web-contributors</edit-permission>
+      <show-max-window>false</show-max-window>
+      <portlet-application>
+         <portlet>
+            <application-ref>ecmadmin</application-ref>
+            <portlet-ref>ECMAdminPortlet</portlet-ref>
+         </portlet>
+         <title>WCM Administration</title>
+         <access-permissions>*:/platform/web-contributors</access-permissions>
+         <show-info-bar>false</show-info-bar>
+         <show-application-state>false</show-application-state>
+         <show-application-mode>false</show-application-mode>
+      </portlet-application>
+   </page>
+</page-set>

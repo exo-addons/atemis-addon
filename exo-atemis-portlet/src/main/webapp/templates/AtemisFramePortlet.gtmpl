@@ -1,0 +1,3 @@
+<!-- Atemis Frame -->
+<iframe class="atemis-frame" style="margin-top:10px" src="<%= uicomponent.initUrl()%>" height="700px" width="100%" frameborder="0"></iframe>
+

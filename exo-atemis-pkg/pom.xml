@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.exoplatform.community</groupId>
+		<artifactId>atemis-addon</artifactId>
+ 		<version>4.0.x</version>
+	</parent>
+	<artifactId>atemis-addon-ear</artifactId>
+	<packaging>ear</packaging>
+	<name>eXo Platform - Atemis Extension - EAR</name>
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>atemis-addon-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.exoplatform.community</groupId>
+			<artifactId>exo-atemis-portlet</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>atemis-addon-war</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>atemis-addon</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<displayName>atemis-addon</displayName>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<modules>
+						<webModule>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>atemis-addon-war</artifactId>
+							<contextRoot>atemis-addon</contextRoot>
+							<bundleFileName>atemis-addon.war</bundleFileName>
+						</webModule>
+						<webModule>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>exo-atemis-portlet</artifactId>
+							<contextRoot>atemis-portlet</contextRoot>
+							<bundleFileName>atemis-portlet.war</bundleFileName>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

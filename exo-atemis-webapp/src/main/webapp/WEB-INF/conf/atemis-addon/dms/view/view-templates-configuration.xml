@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
+   xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.cms.views.ManageViewService</target-component>
+    <component-plugin><!-- Loaded from 'null' -->
+      <name>manage.view.plugin</name>
+      <set-method>setManageViewPlugin</set-method>
+      <type>org.exoplatform.services.cms.views.impl.ManageViewPlugin</type>
+      <init-params>
+        <value-param>
+          <name>predefinedViewsLocation</name>
+          <value>war:/conf/atemis-addon/dms/view</value>
+        </value-param>
+        <value-param>
+          <name>autoCreateInNewRepository</name>
+          <value>true</value>
+        </value-param>
+        <object-param>
+          <name>List</name>
+          <object type="org.exoplatform.services.cms.views.TemplateConfig">
+            <field name="warPath">
+              <string>/ecm-explorer/List.gtmpl</string>
+            </field>
+            <field name="name">
+              <string>List</string>
+            </field>
+            <field name="type">
+              <string>ecmExplorerTemplate</string>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>Content</name>
+          <object type="org.exoplatform.services.cms.views.TemplateConfig">
+            <field name="warPath">
+              <string>/ecm-explorer/Content.gtmpl</string>
+            </field>
+            <field name="name">
+              <string>Content</string>
+            </field>
+            <field name="type">
+              <string>ecmExplorerTemplate</string>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>Thumbnails</name>
+          <object type="org.exoplatform.services.cms.views.TemplateConfig">
+            <field name="warPath">
+              <string>/ecm-explorer/Thumbnails.gtmpl</string>
+            </field>
+            <field name="name">
+              <string>Thumbnails</string>
+            </field>
+            <field name="type">
+              <string>ecmExplorerTemplate</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

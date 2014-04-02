@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
+   xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.cms.views.ManageViewService</target-component>
+    <component-plugin><!-- Loaded from 'null' -->
+      <name>manage.view.plugin</name>
+      <set-method>setManageViewPlugin</set-method>
+      <type>org.exoplatform.services.cms.views.impl.ManageViewPlugin</type>
+      <init-params>
+        <value-param>
+          <name>predefinedViewsLocation</name>
+          <value>war:/conf/atemis-addon/dms/view</value>
+        </value-param>
+        <value-param>
+          <name>autoCreateInNewRepository</name>
+          <value>true</value>
+        </value-param>
+        <object-param>
+          <name>Icons</name>
+          <object type="org.exoplatform.services.cms.views.ViewConfig">
+            <field name="template">
+              <string>/exo:ecm/views/templates/ecm-explorer/Thumbnails</string>
+            </field>
+            <field name="tabList">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <object type="org.exoplatform.services.cms.views.ViewConfig$Tab">
+                    <field name="tabName">
+                      <string>Icons</string>
+                    </field>
+                    <field name="buttons">
+                      <string>upload; addFolder; viewMetadatas; viewPermissions; editDocument; taggingDocument; vote; overloadThumbnail; watchDocument; manageVersions; comment</string>
+                    </field>
+                    
+                  </object>
+                </value>
+              </collection>
+            </field>
+            <field name="name">
+              <string>Icons</string>
+            </field>
+            <field name="permissions">
+              <string>*:/platform/users</string>
+            </field>
+            <field name="hideExplorerPanel">
+              <boolean>false</boolean>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>Web</name>
+          <object type="org.exoplatform.services.cms.views.ViewConfig">
+            <field name="template">
+              <string>/exo:ecm/views/templates/ecm-explorer/Content</string>
+            </field>
+            <field name="tabList">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <object type="org.exoplatform.services.cms.views.ViewConfig$Tab">
+                    <field name="tabName">
+                      <string>Authoring</string>
+                    </field>
+                    <field name="buttons">
+                      <string>addCategory; addFolder; addDocument; editDocument; upload; viewPermissions; managePublications; manageCategories; taggingDocument; vote; watchDocument; publicationRequestApproval; publicationApproveContent; publicationPublish; addLocalizationLink; comment</string>
+                    </field>
+                    
+                  </object>
+                </value>
+              </collection>
+            </field>
+            <field name="name">
+              <string>Web</string>
+            </field>
+            <field name="permissions">
+              <string>*:/platform/web-contributors</string>
+            </field>
+            <field name="hideExplorerPanel">
+              <boolean>false</boolean>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>List</name>
+          <object type="org.exoplatform.services.cms.views.ViewConfig">
+            <field name="template">
+              <string>/exo:ecm/views/templates/ecm-explorer/List</string>
+            </field>
+            <field name="tabList">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <object type="org.exoplatform.services.cms.views.ViewConfig$Tab">
+                    <field name="tabName">
+                      <string>List</string>
+                    </field>
+                    <field name="buttons">
+                      <string>upload; addFolder; viewMetadatas; viewPermissions; editDocument; taggingDocument; vote; watchDocument; manageVersions; comment</string>
+                    </field>
+                    
+                  </object>
+                </value>
+              </collection>
+            </field>
+            <field name="name">
+              <string>List</string>
+            </field>
+            <field name="permissions">
+              <string>*:/platform/users</string>
+            </field>
+            <field name="hideExplorerPanel">
+              <boolean>false</boolean>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>Admin</name>
+          <object type="org.exoplatform.services.cms.views.ViewConfig">
+            <field name="template">
+              <string>/exo:ecm/views/templates/ecm-explorer/List</string>
+            </field>
+            <field name="tabList">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <object type="org.exoplatform.services.cms.views.ViewConfig$Tab">
+                    <field name="tabName">
+                      <string>Admin</string>
+                    </field>
+                    <field name="buttons">
+                      <string>upload; addFolder; viewMetadatas; viewPermissions; editDocument; manageActions; manageRelations; viewProperties; manageAuditing; showJCRStructure</string>
+                    </field>
+                    
+                  </object>
+                </value>
+              </collection>
+            </field>
+            <field name="name">
+              <string>Admin</string>
+            </field>
+            <field name="permissions">
+              <string>*:/platform/administrators</string>
+            </field>
+            <field name="hideExplorerPanel">
+              <boolean>false</boolean>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>Categories</name>
+          <object type="org.exoplatform.services.cms.views.ViewConfig">
+            <field name="template">
+              <string>/exo:ecm/views/templates/ecm-explorer/Content</string>
+            </field>
+            <field name="tabList">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <object type="org.exoplatform.services.cms.views.ViewConfig$Tab">
+                    <field name="tabName">
+                      <string>Collaboration</string>
+                    </field>
+                    <field name="buttons">
+                      <string>addCategory; addDocument; editDocument; upload; viewPermissions; managePublications; manageCategories; taggingDocument; vote; watchDocument; publicationRequestApproval; publicationApproveContent; publicationPublish; comment</string>
+                    </field>
+                    
+                  </object>
+                </value>
+              </collection>
+            </field>
+            <field name="name">
+              <string>Categories</string>
+            </field>
+            <field name="permissions">
+              <string>*:/platform/web-contributors</string>
+            </field>
+            <field name="hideExplorerPanel">
+              <boolean>false</boolean>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.exoplatform.community</groupId>
+    <artifactId>exo-community</artifactId>
+ 		<version>4.0.x</version>
+  </parent>
+
+  <artifactId>exo-atemis-portlet</artifactId>
+  <packaging>war</packaging>
+  <name>eXo Platform - Atemis Extension - Portlet</name>
+  <version>1.0.0</version>
+  <dependencies>
+
+	   <dependency>
+      <groupId>org.gatein.portal</groupId>
+      <artifactId>exo.portal.webui.portal</artifactId>
+    </dependency>
+
+     <dependency>
+      <groupId>org.exoplatform.ecms</groupId>
+      <artifactId>ecms-core-webui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+	<dependency>
+	  <groupId>org.exoplatform.core</groupId>
+	  <artifactId>core-organization</artifactId>
+	  <version>2.1.13</version>
+	  <type>pom</type>
+	</dependency>
+	
+	<dependency>
+	  <groupId>org.exoplatform.core</groupId>
+	  <artifactId>exo.core.component.organization.api</artifactId>
+	  <version>2.5.1-GA</version>
+	</dependency>
+	      
+
+
+  </dependencies>
+	<build>
+		<finalName>atemis-portlet</finalName>
+	</build>
+</project>

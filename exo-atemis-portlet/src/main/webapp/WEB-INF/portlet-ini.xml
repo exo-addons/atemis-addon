@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"> 
+ 
+  <!-- Atemis Frame portlet -->
+  <portlet>
+    <description xml:lang="EN">Atemis Frame Portlet</description>
+    <portlet-name>AtemisFramePortlet</portlet-name>
+    <display-name xml:lang="EN">Atemis Frame Portlet</display-name>
+    <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>    
+
+    <init-param>
+      <name>webui.configuration</name>
+      <value>/WEB-INF/config/portlet/AtemisFrame/configuration.xml</value>
+    </init-param>
+	
+
+    
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+<!-- 	<resource-bundle>locale.portlet</resource-bundle> -->
+    <portlet-info>
+      <title>Atemis Frame Portlet</title>
+      <short-title>Atemis portlet</short-title>
+      <keywords>Atemis Frame Portlet</keywords>
+    </portlet-info>
+    
+	<portlet-preferences>
+	
+	  	<!-- Atemis hostname -->
+		<preference>
+			<name>atemis.host</name>
+			<value></value>
+		</preference>
+	   
+	   <!-- Atemis Page Id -->
+		<preference>
+			<name>atemis.page.holidayRequest</name>
+			<value></value>
+		</preference>
+	 <!-- 
+    <preference>
+      <name>atemis.page.dashboard</name>
+      <value></value>     
+    </preference>
+         
+    <preference>
+      <name>atemis.page.employee</name>
+      <value></value>     
+    </preference>
+         
+    <preference>
+      <name>atemis.page.organigram</name>
+      <value></value>     
+    </preference>
+         
+    <preference>
+      <name>atemis.page.holidaysbalance</name>
+      <value></value>     
+    </preference>
+   -->	  
+   </portlet-preferences>
+   
+  </portlet>   
+  
+</portlet-app>

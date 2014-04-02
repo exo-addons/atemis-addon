@@ -2,4 +2,16 @@ target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.next
+
 release.properties
+
+exo-atemis-config/target/
+exo-atemis-pkg/target/
+exo-atemis-portlet/target/
+exo-atemis-webapp/target/
+
+*.prefs
+*.classpath
+*.project
+.settings/
+
